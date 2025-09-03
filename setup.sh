@@ -151,7 +151,7 @@ echo -e "${GREEN}🐳 Pulling required Docker images...${NC}"
 
 # Pull Docker images in parallel
 podman compose pull &
-docker pull hummingbot/hummingbot:latest &
+podman pull hummingbot/hummingbot:latest &
 
 # Wait for both operations to complete
 wait
