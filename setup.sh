@@ -150,7 +150,7 @@ echo ""
 echo -e "${GREEN}🐳 Pulling required Docker images...${NC}"
 
 # Pull Docker images in parallel
-docker compose pull &
+podman compose pull &
 docker pull hummingbot/hummingbot:latest &
 
 # Wait for both operations to complete
@@ -169,7 +169,7 @@ fi
 echo -e "${GREEN}🚀 Starting Hummingbot Deploy services...${NC}"
 
 # Start the deployment
-docker compose up -d
+podman compose up -d
 
 echo ""
 echo -e "${GREEN}🎉 Deployment Complete!${NC}"
@@ -184,7 +184,7 @@ echo ""
 echo -e "Next steps:"
 echo "1. Access the Dashboard: http://localhost:8501"
 echo "2. Configure your trading strategies"
-echo "3. Monitor logs: docker compose logs -f"
+echo "3. Monitor logs: podman compose logs -f"
 echo ""
 echo -e "${PURPLE}💡 Pro tip:${NC} You can modify environment variables in .env file anytime"
 echo -e "${PURPLE}📚 Documentation:${NC} Check CLAUDE.md for project guidance"
